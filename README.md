@@ -11,7 +11,7 @@ Currently this program only provides a decimal number which can be converted to 
 2. make
 
 # How to use
-$./musicxml-parse Test.xml
+$ ./musicxml-parse Test.xml
 
 # Help
 Music XML Guide:https://wpmedia.musicxml.com/wp-content/uploads/2012/12/musicxml-tutorial.pdf
