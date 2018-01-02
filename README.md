@@ -1,6 +1,14 @@
 # MusicXML-to-Hex
 Currently this program only provides a decimal number which can be converted to hex,binary,octal,etc.
 
+Current Limitations:
+
+-Note Information: 
+
+  - Duration dependent on time signature, 1-8 beats
+  - Time Signature 1/4, 2/4, 3/4, 4/4, 3/8, 6/8, 9/8, 12/8
+  - Note Pitch (5 octaves)
+  
 # Required software and Libraries
 -Xerces-C++ library
 
