@@ -93,6 +93,24 @@ void NoteBinaryConverter::runNoteToBinaryConversion()
             case Note::OCTAVE5_B:{thisNote |= 0x1D; break;}// 000011101
             case Note::OCTAVE5_C:{thisNote |= 0x1E; break;}// 000011110
             case Note::OCTAVE5_D:{thisNote |= 0x1F; break;}// 000011111
+            case Note::OCTAVE5_E:{thisNote |= 0x20; break;}// 000100000
+            case Note::OCTAVE5_F:{thisNote |= 0x21; break;}// 000100001
+            case Note::OCTAVE5_G:{thisNote |= 0x22; break;}// 000100010
+            case Note::OCTAVE5_A:{thisNote |= 0x23; break;}// 000100011
+            case Note::OCTAVE6_B:{thisNote |= 0x24; break;}// 000100100
+            case Note::OCTAVE6_C:{thisNote |= 0x25; break;}// 000100101
+            case Note::OCTAVE6_D:{thisNote |= 0x26; break;}// 000100110
+            case Note::OCTAVE6_E:{thisNote |= 0x27; break;}// 000100111
+            case Note::OCTAVE6_F:{thisNote |= 0x28; break;}// 000101000
+            case Note::OCTAVE6_G:{thisNote |= 0x29; break;}// 000101001
+            case Note::OCTAVE6_A:{thisNote |= 0x2A; break;}// 000101010
+            case Note::OCTAVE7_B:{thisNote |= 0x2B; break;}// 000101011
+            case Note::OCTAVE7_C:{thisNote |= 0x2C; break;}// 000101100
+            case Note::OCTAVE7_D:{thisNote |= 0x2D; break;}// 000101101
+            case Note::OCTAVE7_E:{thisNote |= 0x2E; break;}// 000101110
+            case Note::OCTAVE7_F:{thisNote |= 0x2F; break;}// 000101111
+            case Note::OCTAVE7_G:{thisNote |= 0x30; break;}// 000110000
+            case Note::OCTAVE7_A:{thisNote |= 0x31; break;}// 000110001
             default: { break;}
         }
 
