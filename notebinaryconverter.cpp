@@ -40,10 +40,10 @@ void NoteBinaryConverter::runNoteToBinaryConversion()
             case 6:{ thisNote |= ( (1<<14) | (1<<12) ); break;} // 101
             case 7:{ thisNote |= ( (1<<14) | (1<<13) ); break;} // 110
             case 8:{ thisNote |= ( (1<<14) | (1<<13) | (1<<12) ); break;} // 111
-            default:{ std::cout << "Undefined! "; break;}
+            default:{ std::cout << "Undefined! \n"; break;}
         }
 
-        //0000xxx00000000
+        //0000xxx000000000
         //Note Time Signature
         switch(notesVectorPtr->at(i).getTimeSignature())
         {
@@ -62,37 +62,37 @@ void NoteBinaryConverter::runNoteToBinaryConversion()
         //Note pitch
         switch(notesVectorPtr->at(i).getPitch())
         {
-            case Note::OCTAVE1_B:{thisNote |= (1<<0); break;}// 000000001
-            case Note::OCTAVE1_C:{thisNote |= (1<<1); break;}// 000000010
-            case Note::OCTAVE1_D:{thisNote |= (1<<2); break;}// 000000011
-            case Note::OCTAVE1_E:{thisNote |= (1<<3); break;}// 000000100
-            case Note::OCTAVE1_F:{thisNote |= (1<<4); break;}// 000000101
-            case Note::OCTAVE1_G:{thisNote |= (1<<5); break;}// 000000110
-            case Note::OCTAVE1_A:{thisNote |= (1<<6); break;}// 000000111
-            case Note::OCTAVE2_B:{thisNote |= (1<<7) ; break;}// 000001000
-            case Note::OCTAVE2_C:{thisNote |= ( (1<<8) | (1<<0) ); break;}// 000001001
-            case Note::OCTAVE2_D:{thisNote |= ( (1<<8) | (1<<1) ); break;}// 000001010
-            case Note::OCTAVE2_E:{thisNote |= ( (1<<8) | (1<<2) ); break;}// 000001011
-            case Note::OCTAVE2_F:{thisNote |= ( (1<<8) | (1<<3) ); break;}// 000001100
-            case Note::OCTAVE2_G:{thisNote |= ( (1<<8) | (1<<4) ); break;}// 000001101
-            case Note::OCTAVE2_A:{thisNote |= ( (1<<8) | (1<<5) ); break;}// 000001110
-            case Note::OCTAVE3_B:{thisNote |= ( (1<<8) | (1<<7) ); break;}// 000001111
-            case Note::OCTAVE3_C:{thisNote |= ( (1<<8) | (1<<7) | (1<<0)); break;}// 000010000
-            case Note::OCTAVE3_D:{thisNote |= ( (1<<8) | (1<<7) | (1<<1)); break;}// 000010001
-            case Note::OCTAVE3_E:{thisNote |= ( (1<<8) | (1<<7) | (1<<2)); break;}// 0000010010
-            case Note::OCTAVE3_F:{thisNote |= ( (1<<8) | (1<<7) | (1<<3)); break;}// 000010011
-            case Note::OCTAVE3_G:{thisNote |= ( (1<<8) | (1<<7) | (1<<4)); break;}// 000010100
-            case Note::OCTAVE3_A:{thisNote |= ( (1<<8) | (1<<7) | (1<<5)); break;}// 000010101
-            case Note::OCTAVE4_B:{thisNote |= ( (1<<7) | (1<<6)); break;}// 000010110
-            case Note::OCTAVE4_C:{thisNote |= ( (1<<7) | (1<<6) | (1<<0)); break;}// 000010111
-            case Note::OCTAVE4_D:{thisNote |= ( (1<<7) | (1<<6) | (1<<1)); break;}// 000011000
-            case Note::OCTAVE4_E:{thisNote |= ( (1<<7) | (1<<6) | (1<<2)); break;}// 000011001
-            case Note::OCTAVE4_F:{thisNote |= ( (1<<7) | (1<<6) | (1<<3)); break;}// 000011010
-            case Note::OCTAVE4_G:{thisNote |= ( (1<<7) | (1<<6) | (1<<4)); break;}// 000011011
-            case Note::OCTAVE4_A:{thisNote |= ( (1<<7) | (1<<6) | (1<<5)); break;}// 000011100
-            case Note::OCTAVE5_B:{thisNote |= ( (1<<6) | (1<<5) | (1<<0)); break;}// 000011101
-            case Note::OCTAVE5_C:{thisNote |= ( (1<<6) | (1<<5) | (1<<1)); break;}// 000011110
-            case Note::OCTAVE5_D:{thisNote |= ( (1<<6) | (1<<5) | (1<<2)); break;}// 000011111
+            case Note::OCTAVE1_B:{thisNote |= 0x01; break;}// 000000001
+            case Note::OCTAVE1_C:{thisNote |= 0x02; break;}// 000000010
+            case Note::OCTAVE1_D:{thisNote |= 0x03; break;}// 000000011
+            case Note::OCTAVE1_E:{thisNote |= 0x04; break;}// 000000100
+            case Note::OCTAVE1_F:{thisNote |= 0x05; break;}// 000000101
+            case Note::OCTAVE1_G:{thisNote |= 0x06; break;}// 000000110
+            case Note::OCTAVE1_A:{thisNote |= 0x07; break;}// 000000111
+            case Note::OCTAVE2_B:{thisNote |= 0x08 ; break;}// 000001000
+            case Note::OCTAVE2_C:{thisNote |= 0x09; break;}// 000001001
+            case Note::OCTAVE2_D:{thisNote |= 0x0A; break;}// 000001010
+            case Note::OCTAVE2_E:{thisNote |= 0x0B; break;}// 000001011
+            case Note::OCTAVE2_F:{thisNote |= 0x0C; break;}// 000001100
+            case Note::OCTAVE2_G:{thisNote |= 0x0D; break;}// 000001101
+            case Note::OCTAVE2_A:{thisNote |= 0x0E; break;}// 000001110
+            case Note::OCTAVE3_B:{thisNote |= 0x0F; break;}// 000001111
+            case Note::OCTAVE3_C:{thisNote |= 0x10; break;}// 000010000
+            case Note::OCTAVE3_D:{thisNote |= 0x11; break;}// 000010001
+            case Note::OCTAVE3_E:{thisNote |= 0x12; break;}// 0000010010
+            case Note::OCTAVE3_F:{thisNote |= 0x13; break;}// 000010011
+            case Note::OCTAVE3_G:{thisNote |= 0x14; break;}// 000010100
+            case Note::OCTAVE3_A:{thisNote |= 0x15; break;}// 000010101
+            case Note::OCTAVE4_B:{thisNote |= 0x16; break;}// 000010110
+            case Note::OCTAVE4_C:{thisNote |= 0x17; break;}// 000010111
+            case Note::OCTAVE4_D:{thisNote |= 0x18; break;}// 000011000
+            case Note::OCTAVE4_E:{thisNote |= 0x19; break;}// 000011001
+            case Note::OCTAVE4_F:{thisNote |= 0x1A; break;}// 000011010
+            case Note::OCTAVE4_G:{thisNote |= 0x1B; break;}// 000011011
+            case Note::OCTAVE4_A:{thisNote |= 0x1C; break;}// 000011100
+            case Note::OCTAVE5_B:{thisNote |= 0x1D; break;}// 000011101
+            case Note::OCTAVE5_C:{thisNote |= 0x1E; break;}// 000011110
+            case Note::OCTAVE5_D:{thisNote |= 0x1F; break;}// 000011111
             default: { break;}
         }
 
