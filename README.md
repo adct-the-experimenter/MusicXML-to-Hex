@@ -4,7 +4,9 @@ Currently this program only provides a decimal number which can be converted to 
 -Current Limitations:
 -
 -Currently only decimal numbers displayed in console as output. Will put output in text file later along with hex, octal, binary versions.
+
 -Staff information, sharps, flats not encoded yet.
+
 -Note Information Encoded: 
   - Note Type(Rest or Note with pitch)
   - Duration dependent on time signature, 1-8 beats
